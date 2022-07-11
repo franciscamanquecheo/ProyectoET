@@ -18,10 +18,14 @@ import TheWelcome from '@/components/login.vue'
   <p class="h2 p-3 bg-info bg-opacity-10 border border-success border-start-0 rounded-end d-flex justify-content-center">El sitio web permite a los usuarios de Remind conocer su rendimiento
 en sesiones de estudio </p> <br><br>
 
-<div class="d-grid gap-2 col-6 mx-auto">
-  <button class="btn btn-primary btn-lg" type="button" href="/login">Iniciar Sesion</button><br>
-  <button class="btn btn-primary btn-lg" type="button">Registrarse</button>
-</div>
+
+  <a href="/login">
+  <button  class="btn btn-primary btn-lg d-grid gap-2 col-6 mx-auto" type="button">Iniciar Sesion</button><br>
+  </a>
+  <a href="/registro">
+  <button class="btn btn-primary btn-lg d-grid gap-2 col-6 mx-auto" type="button">Registrarse</button>
+  </a>
+
 </body>
 </template>
 <script>

@@ -2,8 +2,9 @@
 
 <div class="login">
   <header>
-
-        <img src="./views/R.jpg" alt="Trulli" width="100" height="100">
+        <a href="/">
+        <img src="src\views\R.jpg" alt="Trulli" width="100" height="100">
+        </a>
         <span style="color: aliceblue; font-size: 60px;margin-left: 15px;">Reminders Sessions</span>
     </header>
     <br><br>
@@ -20,10 +21,12 @@
   </div>
   <div >
     <a href="/registro">
-  <button type="button" class="btn btn-link btn-lg">Registrar</button>
+  <button type="button" class="btn btn-link btn-lg">Registrarse</button>
   </a>
   </div>
-  <button type="submit" class="btn btn-primary btn-lg">Ingresar</button>
+  <a href="/sesiones">
+  <button type="button" class="btn btn-primary btn-lg ">Ingresar</button>
+  </a>
 </form>
 
 

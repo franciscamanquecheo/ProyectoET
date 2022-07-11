@@ -2,8 +2,9 @@
 
 <div class="registro">
   <header>
-
-        <img src="./R.jpg" alt="Trulli" width="100" height="100">
+         <a href="/">
+        <img src="src\views\R.jpg" alt="Trulli" width="100" height="100">
+        </a>
         <span style="color: aliceblue; font-size: 60px;margin-left: 15px;">Reminders Sessions</span>
     </header> <br><br>
 <h3 class="h1 p-3 bg-info bg-opacity-10 border border-success border-start-0 rounded-end d-flex justify-content-center">Registrarse</h3>
