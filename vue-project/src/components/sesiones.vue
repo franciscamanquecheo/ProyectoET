@@ -23,7 +23,20 @@
 
 <h3>Sesiones Completadas</h3>
 <p class="h5">Datos .....</p>
+<section v-if="errored">
+<p>el archivo json no se lee correctamente</p>
+</section>
+<section v-else>
+  <div v-if="loading">
+  </div>
+  <div v-else
+  v-for="currency in info"
+  :key="currency">
 
+  <p v-bind:src="currency.id"></p>
+  </div>
+
+</section>
 
     <button type="button" class="btn btn-outline-success btn-lg d-grid gap-2 col-6 mx-auto position-absolute bottom-0 start-50 translate-middle-x" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Grafico
@@ -52,6 +65,50 @@
 
 
 </template>
+
+<script>
+
+import axion from 'axios';
+
+export default{
+
+  el: '#sesiones',
+  data(){
+    return {
+      info: null,
+      loading: true,
+      errored: false
+    }
+  },
+  mounted(){
+    axios 
+        .get('https://7qak3a37b4dh7kisebhllubdxq0dnehm.lambda-url.us-east-1.on.aws/')
+        .then(response => {
+          this.info = response.data
+        })
+        .catch(error => {
+          console.log(error)
+          this.errored = true
+        })
+        .finally(() => this.loading = false)
+  }
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Comment 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js" integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 import { VueElement } from 'vue';
